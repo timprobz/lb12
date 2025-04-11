@@ -1,11 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Реєстрація користувача</title>
+    <style>
+        body {
+            display: flex;
+            font-family: 'Times New Roman', Times, serif;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+        }
+
+        .container {
+            border: 5px solid #000000;
+            padding:12px;
+            width: 400px;
+        }
+
+        .container h1 {
+            text-align: center;
+        }
+
+        .container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .container input, .container select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing:border-box;
+        }
+
+        .container button {
+            background-color: #2500f8;
+            color: rgb(255, 255, 255);
+            padding: 15px;
+            cursor: pointer;
+            width: 100%;
+            
+
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Реєстрація користувача</h1>
+        <form>
+            <label for="surname">Прізвище:</label>
+            <input type="text" id="surname" name="surname" required>
+            
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="login">Логін:</label>
+            <input type="text" id="login" name="login" required>
+
+            <label for="group">Навчальна група:</label>
+            <select id="group" name="group" size="1">
+                <option value="101">101-TK</option>
+                <option value="102">102-TK</option>
+                <option value="103">103-TK</option>
+                </select>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
     
+            <label for="confirm_password">Підтвердження паролю:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>   
+
+            <button type="sub" >Зареєструватися</button>
+        </form>
+    </div>
 </body>
 </html>
